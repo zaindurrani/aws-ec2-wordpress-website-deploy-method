@@ -1,35 +1,52 @@
- aws-ec2-wordpress-website-deploy-method
-in this repo process of creating a server and deploying the WordPress website method are discussed
+Deploying a WordPress Website on an AWS EC2 Instance
 
-first of all, as for practice, we have to create an account for AWS if we don't have it currently
-then in services click ec2
-then launch a new instance
-type name for it
-then configure according to your requirement to create a simple ec2 instance
-I'll be using the Ubuntu web server 20.1 
-so I'll choose it and then allow https and http to access
-then create a security group(give it a simple name not use the name with symbols etc)
-then launch
+Prerequisites:
 
-once launched I will open cmd on my PC 
-type cd Download (to Access the security key that is downloaded )
-type the command ssh -i "name of the key" ubuntu@public ip(access it by clicking the instance you're  trying to access)
-if you did the step correctly, you will be able to access the Ubuntu instance through your command line 
-when reached the command line 
-type these commands one by one 
-dot type the number in here 
-2  ls -la
-    3  sudo apt-get update    (for updating )
-    4  sudo apt-get upgrade    (for upgrading)
-    5  sudo apt-get install ec2-instance-connect    (for installing the connect package to use it)
-    4  sudo apt-get upgrade  (to upgrade all packages)
-   10 sudo apt-get install apache2
-   
-to exit Ubuntu you can use the command exit 
-to get back in type the same command you accessed it (ssh -i "name of the key" ubuntu@public ip)
-   to view the history of commands you typed in the ubuntu then type history and enter
+An active AWS account
+Basic familiarity with Linux command-line interface
+Steps:
 
-to see if the Apache server is working, go to aws instances click on the instance find the public DNS below then copy and paste it into the new tab in the browser
+Create an EC2 Instance:
+
+Navigate to the AWS Management Console and select Services > EC2.
+Click Launch Instances.
+Choose an AMI (Amazon Machine Image) that suits your needs. For this guide, we'll use Ubuntu Server 20.1.
+Select an instance type that aligns with your website's resource requirements.
+Configure security groups:
+Allow inbound traffic on ports 80 (HTTP) and 443 (HTTPS).
+Assign a descriptive name to the security group (e.g., "WordPress-SG").
+Launch the instance.
+Connect to the Instance:
+
+Locate the public IP address of your instance in the EC2 Dashboard.
+Download the key pair file (.pem) associated with your instance.
+Open a terminal or command prompt on your local machine.
+Navigate to the directory containing the key pair file: cd Downloads
+Connect to the instance using SSH: ssh -i "key-pair-name.pem" ubuntu@public-ip
+Update and Install Packages:
+
+Once connected, execute the following commands:
+
+Bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install ec2-instance-connect apache2
+Use code with caution. Learn more
+Configure Apache:
+
+(Instructions on configuring Apache for WordPress will be provided here.)
+Deploy WordPress:
+
+(Detailed steps for deploying WordPress will be outlined here.)
+Access the Website:
+
+Obtain the public DNS of your instance from the EC2 Dashboard.
+Paste the public DNS into a web browser to access your WordPress website.
+Additional Notes:
+
+To exit the Ubuntu instance, use the command exit.
+To view command history within the instance, use history.
+For a more comprehensive guide on deploying WordPress, consult the official WordPress documentation.
 
 ![image](https://github.com/zaindurrani/aws-ec2-wordpress-website-deploy-method/assets/96332173/40e0144f-cfe9-43b8-98aa-2aecbbce3be3)
 
