@@ -31,7 +31,7 @@ Bash
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install ec2-instance-connect apache2
-Use code with caution. Learn more
+
 Configure Apache:
 
 (Instructions on configuring Apache for WordPress will be provided here.)
