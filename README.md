@@ -1,4 +1,4 @@
-![image](https://github.com/zaindurrani/aws-ec2-wordpress-website-deploy-method/assets/96332173/771ac9d2-88ec-48d1-bde0-a0780e3a415d)# aws-ec2-wordpress-website-deploy-method
+(https://github.com/zaindurrani/aws-ec2-wordpress-website-deploy-method/assets/96332173/771ac9d2-88ec-48d1-bde0-a0780e3a415d)# aws-ec2-wordpress-website-deploy-method
 in this repo process of creating a server and deploying the WordPress website method are discussed
 
 first of all, as for practice, we have to create an account for AWS if we don't have it currently
